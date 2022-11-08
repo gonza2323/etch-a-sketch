@@ -2,15 +2,22 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
 .row {
     display: flex;
+    flex: auto;
 }
 
 .square {
     background-color: white;
-    width: 16px;
-    height: 16px;
-    border: 1px solid black;
+    flex: auto;
 }
 
 .paintedSquare {

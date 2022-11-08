@@ -2,10 +2,11 @@
 
 
 const body = document.querySelector('body');
+const button = document.querySelector('button');
 
 function makeGrid(size) {
     const container = document.createElement('div');
-    container.classList.add('.container');
+    container.classList.add('container');
     body.appendChild(container);
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
@@ -19,5 +20,15 @@ function makeGrid(size) {
         }
     }
 }
+
+function resizeGrid() {
+    let size = Number.parseInt(prompt('Enter new size'));
+    size = Math.max(Math.min(size, 100), 1);
+    const container = document.querySelector('.container');
+    body.removeChild(container);
+    makeGrid(size);
+}
+
+button.addEventListener('click', resizeGrid);
 
 makeGrid(16);
