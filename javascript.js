@@ -22,7 +22,7 @@ function makeGrid(size) {
 }
 
 function resizeGrid() {
-    let size = Number.parseInt(prompt('Enter new size'));
+    let size = Number.parseInt(prompt('Enter new size', 16));
     size = Math.max(Math.min(size, 100), 1);
     const container = document.querySelector('.container');
     body.removeChild(container);
